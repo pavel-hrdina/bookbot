@@ -1,3 +1,9 @@
+from stats import (
+    char_dic_to_sorted,
+    count_word_occurrences,
+    get_book_text,
+    length_of_string,
+)
 
 
 def main() -> None:
@@ -7,27 +13,12 @@ def main() -> None:
     """
     # Check if the script received any arguments
     book_content = get_book_text('./books/frankenstein.txt')
-    return length_of_string(book_content)
+    word_occurrences = count_word_occurrences(book_content)
+    new_char_list = char_dic_to_sorted(word_occurrences)
 
-
-def get_book_text(filepath) -> str:
-    """
-    Takes a filepath and returns its content.
-    :param filepath: str
-    :return: str
-    """
-    with open(filepath) as f:
-        return f.read()
-
-
-def length_of_string(text: str) -> None:
-    """
-    Takes a string and returns its length.
-    :param text: str
-    :return: None
-    """
-    length = len(text.split())
-    print(f"{length} words found in the document")
+    length_of_string(book_content)
+    for char in new_char_list:
+        print(char)
 
 
 if __name__ == '__main__':
