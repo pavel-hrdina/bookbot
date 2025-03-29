@@ -37,7 +37,11 @@ def count_word_occurrences(book_content: str) -> dict[str, int]:
 
 
 def char_dic_to_sorted(char_dic: dict[str, int]) -> list[str]:
-    sorted_char_list = sorted(char_dic.items(), key=lambda x: x[1], reverse=True)  # OMG magik
-    sorted_char_list = [f'{key}: {value}' for key, value in sorted_char_list if key.isalpha()]  # wtf
+    sorted_char_list = sorted(
+        char_dic.items(), key=lambda x: x[1], reverse=True
+    )  # OMG magik
+    sorted_char_list = [
+        f"{key}: {value}" for key, value in sorted_char_list if key.isalpha()
+    ]  # wtf
     # print(sorted_char_list)  # for debug
     return sorted_char_list
