@@ -4,9 +4,6 @@ A word count file analyzer writen in python.
 
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
 ### Prerequisites
 
 You only need vanilla python, no 3d party libs were used in the making. Install python from your
