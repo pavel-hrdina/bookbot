@@ -19,7 +19,10 @@ def main() -> None:
         word_occurrences = count_word_occurrences(book_content)
         new_char_list = char_dic_to_sorted(word_occurrences)
 
+        print('----------- Word Count ----------')
         length_of_string(book_content)
+        
+        print('--------- Character Count -------')
         for char in new_char_list:
             print(char)
     else:
@@ -28,5 +31,8 @@ def main() -> None:
 
 
 if __name__ == '__main__':
+    print('============ BOOKBOT ============')
+    print('Analyzing book found at books/frankenstein.txt...')
     main()
+    print('============= END ===============')
 
